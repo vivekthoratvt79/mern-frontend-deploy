@@ -7,7 +7,7 @@ const Logout = () => {
 
   const navigate = useNavigate();
   const logout = async () => {
-    const res = await fetch("/logout", {
+    const res = await fetch(`${process.env.SERVICE_URL}/logout`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

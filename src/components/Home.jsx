@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 const Home = () => {
   const [userData, setUserData] = useState({});
   const callAboutApi = async () => {
-    const res = await fetch("/getData", {
+    const res = await fetch(`${process.env.SERVICE_URL}/getData`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

@@ -11,7 +11,7 @@ const Contact = () => {
 
   const getData = async () => {
     try {
-      const res = await fetch("/getData", {
+      const res = await fetch(`${process.env.SERVICE_URL}/getData`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -52,7 +52,7 @@ const Contact = () => {
     e.preventDefault();
     const { name, email, phone, message } = userData;
 
-    const res = await fetch("/contact", {
+    const res = await fetch(`${process.env.SERVICE_URL}/contact`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
