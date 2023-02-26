@@ -31,7 +31,7 @@ const Signup = () => {
       return false;
     }
 
-    const res = await fetch(`${process.env.SERVICE_URL}/register`, {
+    const res = await fetch(`${process.env.REACT_APP_SERVICE_URL}/register`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

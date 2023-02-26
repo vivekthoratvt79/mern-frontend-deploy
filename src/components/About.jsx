@@ -5,13 +5,14 @@ import { FaEdit } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 const About = () => {
+
   const navigate = useNavigate();
   const [activeTab, setActivetab] = useState("about");
   const [userData, setUserData] = useState({});
 
   const callAboutPage = async () => {
     try {
-      const res = await fetch(`${process.env.SERVICE_URL}/about`, {
+      const res = await fetch(`${process.env.REACT_APP_SERVICE_URL}/about`, {
         method: "GET",
         headers: {
           Accept: "application/json",
@@ -34,6 +35,7 @@ const About = () => {
 
   useEffect(() => {
     callAboutPage();
+    // eslint-disable-next-line
   }, []);
 
   const AboutTabContent = () => {
