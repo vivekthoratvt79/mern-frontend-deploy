@@ -13,6 +13,7 @@ const Contact = () => {
     try {
       const res = await fetch(`${process.env.REACT_APP_SERVICE_URL}getData`, {
         method: "GET",
+        credentials: "include",
         headers: {
           "Content-Type": "application/json",
         },
