@@ -12,7 +12,7 @@ const About = () => {
 
   const callAboutPage = async () => {
     try {
-      const res = await fetch(`${process.env.REACT_APP_SERVICE_URL}/about`, {
+      const res = await fetch(`${process.env.REACT_APP_SERVICE_URL}about`, {
         method: "GET",
         headers: {
           Accept: "application/json",

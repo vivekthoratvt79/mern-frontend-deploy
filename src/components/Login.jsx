@@ -21,7 +21,7 @@ const Login = () => {
       alert("All fields are mandatory.");
       return false;
     }
-    const res = await fetch(`${process.env.REACT_APP_SERVICE_URL}/login`, {
+    const res = await fetch(`${process.env.REACT_APP_SERVICE_URL}login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
